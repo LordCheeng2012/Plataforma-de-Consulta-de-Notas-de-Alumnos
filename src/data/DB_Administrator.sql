@@ -11,13 +11,13 @@ Crear BD para sistema de consulta de registro de Notas
 create database if not exists DB_Management;
 
 create table if not exists Data_Alumnos(
-ID_Alumno int auto_increment primary key,
-Dni int,
+Dni int primary key,
 Nombres varchar(100),
 Apellidos varchar(100),
 Modulo_1 int,
 Modulo_2 int,
-Modulo_3 int
+Modulo_3 int,
+Promedio int
 )ENGINE =InnoDB;
 
 /*Data prueba*/
@@ -45,21 +45,42 @@ INSERT INTO Data_Alumnos (Dni, Nombres, Apellidos, Modulo_1, Modulo_2, Modulo_3)
 
 /*stored procedures*/
 DELIMITER //
-create procedure FindByNameAndApellidos(
-in Nombres varchar(100),
-in Apellidos varchar(100)
+create procedure  FindByNameAndApellidos(
+in Nomb varchar(100),
+in Ape varchar(100)
 )
+/*Obtiene o Consulta Existencia de registro de notas por Alumnno 
+Descripcion : Busca la existencia de notas mediante su dni , 
+			  para ello realiza una subconsulta interna para obtener el dni
+              basando en su nombre y apellido.
+*/
 begin
-/*Obtener o Consultar existencia de data del alumno*/
-
-
+DECLARE DNI_ALUMN INT;
+if (Nomb is not null) and (Ape is not null) then
+ if ( Nomb<> '') and ( Ape <> '') then
+ begin
+  select Dni from data_alumnos where Nombres = Nomb and Apellidos = Ape into DNI_ALUMN;
+  if DNI_ALUMN is null then
+  select 'No se encontro ningun Registro, Por favor verifique los datos ingresados' as Response;
+  else 
+  select * from data_alumnos where Dni = DNI_ALUMN;
+  end if;
+  end;
+   else
+  select 'Alguno de los valores no existen' as Response;
+ end if;
+ else
+  select 'Alguno de los valores estan vacios' as Response;
+end if;
 end //
 DELIMITER ;
 
+call FindByNameAndApellidos('Elena','Díaz');
+
+update data_alumnos set Promedio = (Modulo_1+Modulo_2+Modulo_3)/3; 
 
 
-
-
+ 
 
 
 

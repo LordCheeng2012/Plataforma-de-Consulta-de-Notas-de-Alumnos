@@ -6,6 +6,7 @@ class Alumnos{
     private $Modulo_1;
     private $Modulo_2;
     private $Modulo_3;
+    private $Promedio;
     //getters y setters
     public function getDNI(){
         return $this->DNI;
@@ -43,14 +44,22 @@ class Alumnos{
     public function setModulo_3($Modulo_3){
         $this->Modulo_3 = $Modulo_3;
     }
+
+    public function getPromedio(){
+        return $this->Promedio;
+    }
+    public function setPromedio($promedio){
+        $this->Promedio=$promedio;
+    }
     //constructor
-    public function __construct($DNI, $Nombres, $Apellidos, $Modulo_1, $Modulo_2, $Modulo_3){
+    public function __construct($DNI, $Nombres, $Apellidos, $Modulo_1, $Modulo_2, $Modulo_3,$Promedio){
         $this->DNI = $DNI;
         $this->Nombres = $Nombres;
         $this->Apellidos = $Apellidos;
         $this->Modulo_1 = $Modulo_1;
         $this->Modulo_2 = $Modulo_2;
         $this->Modulo_3 = $Modulo_3;
+        $this->Promedio=$Promedio;
     }
 
 

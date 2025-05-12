@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Consulta.css">
+    <title>EVALUACIÓN DEL CURSO</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="Header">
+            <h1>EVALUACIÓN DEL CURSO</h1>
+        </div>
+        <form action="#"  id="frmConsulta">
+           <div class="content-form">
+            <h3>Ingrese sus nombres completos y sus apellidos </h3>
+           <div class="ctn-inputs">
+            <label for="nombre">Nombres completos:</label><img onmouseenter="info('info1')" src="icons/icons8-info.svg">
+           
+            <div id="info1" class="info" >
+                <p>Nombres completos ej: Maria Cruzado, tambien puede ser 
+                    1 nombre pero al menos debe contener uno de ellos,
+                    ademas tener en cuenta que la busqueda es sensible tildes</p>
+            </div>
+            <input type="text" id="TxtNombre" name="TxtNombre" required  maxlength="30" ">
+            <label for="apellido">Apellidos completos:</label><img onmouseenter="info('info2')" src="icons/icons8-info.svg">
+           
+            <div id="info2" class="info">
+                <p>Apellidos completos ej: Gutierrez Quispe, 
+                    tambien puede ser 1 apellido pero al menos
+                     debe contener uno de ellos, ademas tener en cuenta que la busqueda es sensible tildes</p>
+            </div>
+            <input type="text" id="TxtApellido"  name="TxtApellido" required maxlength="30" >
+           </div>
+            <button type="submit" onclick="Consultar('frmConsulta')" class="btn" value="Consultar">Consultar</button>
+           </div>
+        </form>
+        <div class="Result-Table">
+            <table >
+                <thead id="th">
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Modulo 1</th>
+                    <th>Modulo 2</th>
+                    <th>Modulo 3</th>
+                </thead>
+                <tbody>
+                    <tr id="trs">
+                        <td  >Maria</td>
+                        <td>Cruzado</td>
+                        <td>20</td>
+                        <td>12</td>
+                        <td>07</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+   
+    
+
+    <script src="Consulta.js"></script>
+</body>
+</html>
