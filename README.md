@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Plataforma de Consulta de Notas de Alumnos
 
 Este sistema fue desarrollado por **ULTIMATE 2012 (UL2012)** con el objetivo de automatizar los procesos de registro y actualización de notas para los alumnos. Está diseñado para ser utilizado por profesores y administradores académicos que deseen gestionar de manera eficiente las calificaciones de sus estudiantes.
@@ -70,3 +71,15 @@ Este proyecto fue desarrollado por ULTIMATE 2012 (UL2012). Todos los derechos re
 
 Licencia
 Este proyecto está licenciado bajo la Licencia Apache 2.0. ```s
+=======
+# Plataforma-de-Consulta-de-Notas-de-Alumnos
+Este sistema es de uso interno y está destinado a un profesor que desea automatizar los procesos de registro y actualización de notas para sus alumnos.
+
+# USO ESTRICTAMENTE EDUCATIVO
+Para ejecutar este proyecto debera tener en cuenta los siguientes puntos :
+  REQUISITOS DE EL SISTEMA  
+    - SISTEMA OPERATIVO : WINDOWS
+    - Mysql Servidor V8++
+  
+
+>>>>>>> 59013d3455b22f8f7b18d5f5f903adf4fa21813a
