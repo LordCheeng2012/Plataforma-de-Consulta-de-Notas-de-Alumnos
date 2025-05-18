@@ -1,0 +1,96 @@
+body {
+    background-color: white;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window {
+    background-color: brown;
+    width: 50%;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.title-bar {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.message {
+    margin-bottom: 20px;
+    font-size: 1em;
+    text-align: left;
+    color: white;
+}
+
+/* Estilos para mensajes de éxito */
+.success {
+    background-color: #a05252;
+    color: white;
+    padding: 15px;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de error */
+.error {
+    background-color: #d26969;
+    color: white;
+    padding: 15px;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+/* Estilos para mensajes de alerta */
+.alert {
+    background-color: #e6b8b8;
+    color: white;
+    padding: 15px;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: brown;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: brown;
+    color: white;
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #4a2c2a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}

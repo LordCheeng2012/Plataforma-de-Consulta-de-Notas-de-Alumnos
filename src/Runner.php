@@ -26,29 +26,16 @@ $this->Endpoint= new SERVICIO();
 
 } 
 public function Run(){
-//llame o ejecute aqui sus metodos o instancias de clase 
-   
-    $res=$this->Endpoint->GET_AlumnByNameAndApellidos("Isabel Maria","Sánchez");
-    if (is_string($res)) {
+    //llame o ejecute aqui sus metodos o instancias de clase 
+  
+    if (is_numeric("78")) {
         # code...
-        echo '[INFO]:Metodo ejecutado correctamente'."\n";
-        echo '[RESULTADO]:'.$res."\n";
+        echo "Numero";
     }else{
-
-        echo '[INFO]:Metodo ejecutado correctamente'."\n";
-        echo '[Detalles]:['."\n";
-        echo '[ALUMNO]:'.$res->getNombres()." ".$res->getApellidos()."\n";
-        echo 'MODULO 1: '.$res->getModulo_1()."\n";
-        echo 'MODULO 1: '.$res->getModulo_2()."\n";
-        echo 'MODULO 1: '.$res->getModulo_3()."\n";
-        echo 'Promedio: '.$res->getPromedio()."\n";
-        echo ']'."\n";
-
-
-
+        echo "Cadena";
     }
 
-}
+    }
 
 }
     //ejecucion del script

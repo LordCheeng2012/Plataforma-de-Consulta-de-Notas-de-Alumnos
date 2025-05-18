@@ -4,11 +4,11 @@
   ob_start();
 require_once __DIR__.'/../service/impl/IMP_SERV.php';
 
-if (isset( $_GET['Nombre'])&& isset($_GET['Apellidos'])) {
+if (isset( $_GET['Code'])) {
     # code...
-    $Nombre = trim($_GET['Nombre']);
-    $Apellidos =trim($_GET['Apellidos']);
-    GET_Register($Nombre,$Apellidos);
+    $Nombre = trim($_GET['Code']);
+   
+    GET_Register($Nombre);
 }else{
     //header("content-type:application/json");
     http_response_code(500);
@@ -16,16 +16,15 @@ if (isset( $_GET['Nombre'])&& isset($_GET['Apellidos'])) {
 }
 
 
-  function GET_Register($Name,$Apellidos){
+  function GET_Register($Name){
 
     $HTTP_CODE=400;
     $SERVICE = new SERVICIO();
-    if ($Name <>''  && $Apellidos <> '') {
+    if ($Name <>'') {
         # code...
 
       
-    $register = $SERVICE->GET_AlumnByNameAndApellidos($Name,
-    $Apellidos);
+    $register = $SERVICE->GET_AlumnByNameAndApellidos($Name);
 
     //finalizar los logs
     ob_get_clean();

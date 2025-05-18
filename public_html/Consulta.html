@@ -14,24 +14,19 @@
         </div>
         <form action="#"  id="frmConsulta">
            <div class="content-form">
-            <h3>Ingrese sus nombres completos y sus apellidos </h3>
+            <h3>Ingrese sus apellidos o su nombre de usuario del aula virtual </h3>
            <div class="ctn-inputs">
-            <label for="nombre">Nombres completos:</label><img onmouseenter="info('info1')" src="icons/icons8-info.svg">
+            <label for="nombre">Buscar:</label><img onmouseenter="info('info1')" src="icons/icons8-info.svg">
            
             <div id="info1" class="info" >
                 <p>Nombres completos ej: Maria Cruzado, tambien puede ser 
                     1 nombre pero al menos debe contener uno de ellos,
-                    ademas tener en cuenta que la busqueda es sensible tildes</p>
+                    o tu codigo de usuario inscrito en el aula virtual</p>
             </div>
-            <input type="text" id="TxtNombre" name="TxtNombre" required  maxlength="30" ">
-            <label for="apellido">Apellidos completos:</label><img onmouseenter="info('info2')" src="icons/icons8-info.svg">
+            <input type="text" id="TxtCode" name="TxtCode" required  maxlength="30" minlength="5" ">
            
-            <div id="info2" class="info">
-                <p>Apellidos completos ej: Gutierrez Quispe, 
-                    tambien puede ser 1 apellido pero al menos
-                     debe contener uno de ellos, ademas tener en cuenta que la busqueda es sensible tildes</p>
-            </div>
-            <input type="text" id="TxtApellido"  name="TxtApellido" required maxlength="30" >
+           
+           
            </div>
             <button type="submit" onclick="Consultar('frmConsulta')" class="btn" value="Consultar">Consultar</button>
            </div>
@@ -44,23 +39,24 @@
                     <th>Modulo 1</th>
                     <th>Modulo 2</th>
                     <th>Modulo 3</th>
+                    <th>Promedio</th>
+
                 </thead>
                 <tbody>
                     <tr id="trs">
-                        <td  >Maria</td>
-                        <td>Cruzado</td>
-                        <td>20</td>
-                        <td>12</td>
-                        <td>07</td>
+                        <td colspan="6">Buscar Registros</td>
                     </tr>
                 </tbody>
             </table>
 
         </div>
+        <h1>powered by ULTIMATE 2012</h1>
     </div>
    
-    
-
+    <dialog>
+        <p>Greetings, one and all!</p>
+      </dialog>
+      <div class="dialog-backdrop"></div>
     <script src="Consulta.js"></script>
 </body>
 </html>
